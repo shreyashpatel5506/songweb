@@ -1,0 +1,333 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery.txt"></script>
+    <title>Spotify</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="part1">
+                <span class="logo"><img src="spotify.svg" alt="logo">Spotify</span>
+                <span class="home"><img src="house.svg" alt="home">Home</span>
+                <span class="search"><img src="search.svg" alt="Search">Search</span>
+            </div>
+            <div class="part2">
+                <div class="row">
+                    <span>Your Library</span>
+                    <span style="font-size: larger;">+</span>
+                </div>
+                <div class="sub">
+                <div class="column">
+                    <span style="font-size: 16px;font-weight: 600;"> Create your First playlist</span>
+                    <span style="font-size: 14px;">It's easy,we'll help you</span>
+                    <span class="button">Create Playlist</span>
+                </div>
+                <div class="column">
+                    <span>Let's find some podcasts to follow</span>
+                    <span>We'll keep you updated on new episodes</span>
+                    <span class="button">Browse podcasts</span>
+                </div>
+                </div>
+                <footer><div>
+                    <span>Legal</span>
+                    <span>Safety&PrivacyCenter</span>
+                    <span>Privacy Policy</span>
+                    <span>Cookies</span>
+                    <span>About Ads</span>
+                    <span>Accessibility</span>
+                    <span>Cookies</span>
+                    </div>
+                    <div class="button"><img src="globe2.svg" alt="lang">English</div>
+                </footer>
+            </div>
+        </div>
+        <div class="right">
+            <section id="main">
+                <div class="subpart">
+                    <div class="title">
+                        <span style="font-size: 22px;">Popular Artists</span>
+                        <span style="font-size: 15px;color:rgb(195, 195, 195);" id="moreartistlist">Show All</span>
+                    </div>
+                    <div class="Artists">
+                        <div class="card" id="arjit">
+                            <span><img  class="attr" src="https://i.scdn.co/image/ab676161000051745ba2d75eb08a2d672f9b69b7" alt="arjitsingh"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">arjit singh</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c" alt="A.Rahman"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">A.R.Rahman</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i.scdn.co/image/ab67616100005174a038d7d87f8577bbb9686bd3" alt="sachinjigar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Sachin-Jigar</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" alt="lataji" src="data:image/jpeg;base64,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"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Lata Mangeshkar</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://s.saregama.tech/image/c/m/7/4d/3d/4855_1624534523.jpg" alt="mukeshkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Mukesh kumar</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="mukeshkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Pritam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpart">
+                    <div class="title">
+                         <span style="font-size: 22px;">Popular Albums</span>
+                        <span style="font-size: 15px;color:rgb(195, 195, 195);">Show All</span>
+                    </div>
+                    <div class="Albums">
+                        <div class="card">
+                            <span><img class="attr" src="https://upload.wikimedia.org/wikipedia/en/f/f3/Aashiqui_2_%28Poster%29.jpg" alt="asqie2"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Aashiqui 2</span>
+                            <span class="name1">Mithhon,Ankit Tiwari,Jeet Gannguli</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i1.sndcdn.com/artworks-000051285634-3qga48-t500x500.jpg" alt="yeh diwani hey mastani"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name" style="font-size: 12px;">Yeh jawani deewani hay mastani</span>
+                            <span class="name1">Pritam</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmIVh5rcuZcJxWojc76iRdXcZFfkag756VnQ&s" alt="animal"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">ANIMAL</span>
+                            <span class="name1">Manan Bhardwaj,Vishal Mishra,Janni</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://m.media-amazon.com/images/I/51okznhXAXL._UXNaN_FMjpg_QL85_.jpg" alt="lata"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name1">Lata Mangeshkar</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://www.yashrajfilms.com/images/default-source/Music/dilwale-dulhania-le-jayenge.jpg?sfvrsn=162dcfcc_4" alt="DDLJ"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">DDLJ</span>
+                            <span class="name1">Lata,asha,udit</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i.scdn.co/image/ab67616d00001e0252fe6875028c892308ffc2f7" alt="DDLJ"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">JAB VE MET</span>
+                            <span class="name1">Pritam</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpart">
+                    <div class="title">
+                        <span style="font-size: 22px;">Popular Radio</span>
+                       <span style="font-size: 15px;color:rgb(195, 195, 195);">Show All</span>
+                   </div>
+                   <div class="radio">
+                        <div class="card">
+                            <span><img class="attr" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/4YRxDV8wJFPHPTeXepOstw/en" alt="arjitradio"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span style="font-size: 13px;" class="name1">With Neha Kakkar, Pritam, KK and more</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/0GF4shudTAFv8ak9eWdd4Y/en-GB" alt="kishorkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span style="font-size: 13px;" class="name1">With Mohammed Rafi, Asha Bhosle, R. D. Burman and more</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" alt="radio" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/1mYsTxnqsietFxj1OgoGbG/en-GB"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span style="font-size: 13px;" class="name1">With Shankar Mahadevan, Anirudh Ravichander, Yuvan Shankar Raja and more</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/4fEkbug6kZzzJ8eYX6Kbbp/en-GB" alt="radio"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span style="font-size: 13px;" class="name1">With Mohit Chauhan, Ankit Tiwari, Javed Ali and more</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/2ae6PxICSOZHvjqiCcgon8/en-GB" alt="radio"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <spna style="font-size: 13px;" class="name1">With Mano, Ilaiyaraaja, S. Janaki and more</spna>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://seeded-session-images.scdn.co/v2/img/540/r/artist/4K6blSRoklNdpw4mzLxwfn/en-GB" alt="radio"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <spna style="font-size: 13px;" class="name1">With AlkaYagnik, Udit Narayan and more</spna>
+                        </div>
+                   </div>
+                </div>
+
+                <div class="footer">
+                    <div class="column1">
+                        <span class="First">Company</span>
+                        <span>About</span>
+                        <span>Jobs</span>
+                        <span>For the Record</span>
+                    </div>
+                    <div class="column1">
+                        <span class="First">Communities</span>
+                        <span>For Artists</span>
+                        <span>Developers</span>
+                        <span>Advertising</span>
+                        <span>Investors</span>
+                        <span>Vendors</span>
+                    </div>
+                    <div class="column1">
+                        <span class="First">Useful links</span>
+
+                        <span>Support</span>
+                        <span>Free Mobile App</span>
+                    </div>
+                    <div class="column1">
+                        <span class="First">Spotify Plans</span>
+
+                        <span>Premium Individual</span>
+                        <span>Premium Duo</span>
+                        <span>Premium Family</span>
+                        <span>Premium Student</span>
+                        <span>Spotify Free</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="moreartist">
+                <div class="subpart">
+                    <div class="title">
+                        <span style="font-size: 22px;" class="back" onclick="artistback()">&larr;</span>
+                        <span style="font-size: 22px;">Popular Artist</span>
+                    </div>
+                    <div class="Artists">
+                        <div class="card">
+                            <span><img  class="attr" src="https://i.scdn.co/image/ab676161000051745ba2d75eb08a2d672f9b69b7" alt="arjitsingh"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">arjit singh</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i.scdn.co/image/ab67616100005174b19af0ea736c6228d6eb539c" alt="A.Rahman"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">A.R.Rahman</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i.scdn.co/image/ab67616100005174a038d7d87f8577bbb9686bd3" alt="sachinjigar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Sachin-Jigar</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" alt="lataji" src="data:image/jpeg;base64,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"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Lata Mangeshkar</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://s.saregama.tech/image/c/m/7/4d/3d/4855_1624534523.jpg" alt="mukeshkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Mukesh kumar</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="mukeshkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Pritam</span>
+                        </div>
+                        <div class="card">
+                            <span><img  class="attr" src="https://i.scdn.co/image/ab67616100005174c40600e02356cc86f0debe84" alt="arjitsingh"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">atif aslam</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i.scdn.co/image/ab676161000051748de0e6e7e55d7773931ab7f4" alt="A.Rahman"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Udit Narayan</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i.scdn.co/image/ab67616100005174fd5ddfdc83ae91d0515bacf6" alt="sachinjigar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">darshan raval</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" alt="lataji" src="https://i.scdn.co/image/ab67616100005174b09a31f853166e721d4d46b2"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">K.K</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://i.scdn.co/image/ab6761610000517436a7262247318ff0f1ad00da" alt="mukeshkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Alka Yagnik</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://yt3.googleusercontent.com/VzKX7I0iD2eEHoWqk2drqOTFsPWX6hTGul0drSXXde8hWEcYNq7H_VdWHBC5RDawV_LoUBmD=s900-c-k-c0x00ffffff-no-rj" alt="mukeshkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Kishor Kumar</span>
+                        </div>
+                        <div class="card">
+                            <span><img  class="attr" src="https://rukminim2.flixcart.com/image/850/1000/juk4gi80/poster/f/s/u/large-newposter8364-mohammad-rafi-classic-ii-singer-poster-large-original-imaf5tfyfgkchcjm.jpeg?q=90&crop=false" alt="arjitsingh"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">mohmad rafi</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://m.media-amazon.com/images/M/MV5BNzVlYmY0MjctMTVkYy00YTdiLThkN2MtMTc2OWU3YTFkZmM3XkEyXkFqcGc@._V1_.jpg" alt="A.Rahman"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Asha Bhosle</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAr8-RFCPKEoqY29vzLrQBr5yta5GtNg9VIg&s" alt="sachinjigar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">kailash Khair</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" alt="lataji" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnXHrWvaE1ubq_Da_ZSgrzsyO7rxg9cszPIQ&s"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Shreya Ghosal</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQw4ugeDLIeX1QoTBMqhDD2TI6oYIuVfvlUP8m9kONJkY0aw_Ul" alt="mukeshkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Jubin Nityadal</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ9LlYSUE5HT9bizo3OTYFyLgkPc66xHxGIY-TkumpcOoymdYiV" alt="mukeshkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Sonu nigam</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTk22BS-YJDzv-7Gok3tciuH0g46rDQrUZz4emBb7Y9tR2wa0TB" alt="mukeshkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">JAgjit singh</span>
+                        </div>
+                        <div class="card">
+                            <span><img class="attr" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTXZ-aHyuHj9Cv4vckO2-WdeieTWt-3rdEIdgvQClRIRinA_A22" alt="mukeshkumar"><svg class="play" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg></span>
+                            <span class="name">Kumar sanu</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="ArjitSingh">
+                <div class="titles">
+                    <div class="firstartist">
+                        <div class="image">
+                        <span><img src="https://i.scdn.co/image/ab676161000051745ba2d75eb08a2d672f9b69b7" alt="arjit"></span>
+                    </div>
+                    <div class="namepart">
+                        <div class="verifyrow">
+                            <svg data-encore-id="icon" role="img" aria-hidden="true" class="Svg-sc-ytk21e-0 ZxtYq b0NcxAbHvRbqgs2S8QDg" viewBox="0 0 24 24"><path d="M10.814.5a1.658 1.658 0 0 1 2.372 0l2.512 2.572 3.595-.043a1.658 1.658 0 0 1 1.678 1.678l-.043 3.595 2.572 2.512c.667.65.667 1.722 0 2.372l-2.572 2.512.043 3.595a1.658 1.658 0 0 1-1.678 1.678l-3.595-.043-2.512 2.572a1.658 1.658 0 0 1-2.372 0l-2.512-2.572-3.595.043a1.658 1.658 0 0 1-1.678-1.678l.043-3.595L.5 13.186a1.658 1.658 0 0 1 0-2.372l2.572-2.512-.043-3.595a1.658 1.658 0 0 1 1.678-1.678l3.595.043L10.814.5zm6.584 9.12a1 1 0 0 0-1.414-1.413l-6.011 6.01-1.894-1.893a1 1 0 0 0-1.414 1.414l3.308 3.308 7.425-7.425z"></path></svg>
+                            <p>Verified Artist</p>
+                        </div>
+                        <span class="artistname">Arjit Singh</span>
+                        <span class="count">40,826,766 monthly listeners</span>
+                    </div>
+                    </div>
+                    <div class="secondartist">
+                        <div class="playrow">
+                            <svg class="playlite" data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 bneLcE"><path d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"></path></svg>
+                        </div>
+                        <div class="follow">follow</div>
+                        <div>
+                            <svg data-encore-id="icon" class="dots" role="img" aria-hidden="true" viewBox="0 0 24 24" class="Svg-sc-ytk21e-0 cqasRA"><path d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="songs">
+                    <div class="line">
+                        <div class="detail" id="sajinisong" aria-label="Sajnni by Arjit Singh from Laapata ladies">
+                            <span aria-rowindex="1" class="songnumber">1</span>
+                            <span class="songimage"><img src="https://i.scdn.co/image/ab67616d00001e02d5f4378b1ffc9119fdc7306d" alt="sajni"></span>
+                            <span class="songname">Sajni Re (From "Laapata Ladies")</span>
+                        </div>
+                        <div class="detail" arialabel="Satranaga Arjit Singh">
+                            <span aria-rowindex="2" class="songnumber">2</span>
+                            <span class="songimage"><img src="https://i.scdn.co/image/ab67616d00001e02021d7017f73387b008eab271" alt="starnaga"></span>
+                            <span class="songname">Satranga(From Animal)</span>
+                        </div>
+                        <div class="detail" aria-label="Chaleya Arjit singh">
+                            <span class="songnumber" aria-rowindex="3">3</span>
+                            <span class="songimage"><img src="https://i.scdn.co/image/ab67616d00001e02e452a6e11147f3e56aee6f5b" alt="Chaleya"></span>
+                            <span class="songname">Chaleya </span>
+                        </div>
+                        <div class="detail" aria-label="O Mahii">
+                            <span class="songnumber" aria-rowindex="4">4</span>
+                            <span class="songimage"><img src="https://i.scdn.co/image/ab67616d00001e02ab1e3b16de1c7ec009880e97" alt="o mahii"></span>
+                            <span class="songname">O Mahii</span>
+                        </div>
+                </div>
+                </div>
+            </section>
+            <section id="sajnire">
+                <video width="320" height="240" controls>
+                    <source src="videoplayback.mp4" type="video/mp4"></video>
+            </section>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
