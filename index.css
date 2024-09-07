@@ -327,7 +327,7 @@ flex-shrink:0;
     flex-wrap: wrap;
     gap: 25px;
     row-gap: 50px;
-    display: none;
+    
 }
 #moreartist{
     display: none;
